@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block metadescription %}
+    {% if category %}
+        {{ category.description|truncatewrods:155 }}
+    {% endif %}    
+{% endblock %}
+{% block title %}
+    {% if category %}
+        {{ category.name }} - PhoneShop
+    {% else %}
+        Welcome to our phone collection - PhoneShop
+    {% endif %}
+{% endblock %}
+
+
+<!-- navigation -->
+    {% if category %}
+        <div>
+            <div>
+                <p><a href="">Our Product Collection</a></p>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
